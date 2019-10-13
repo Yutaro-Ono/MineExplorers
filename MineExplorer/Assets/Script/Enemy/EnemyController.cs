@@ -43,15 +43,17 @@ public class EnemyController : MonoBehaviour
         {
             state = EnemyState.Run;
         }
-        else
-        {
-            state = EnemyState.Idle;
-        }
 
         // 攻撃フラグがオンの時、攻撃していることを示す " Attack " に設定
-        if(m_attack.isAttack == true)
+        if (m_attack.isAttack == true)
         {
             state = EnemyState.Attack;
+        }
+
+        // スピードが0なら待機状態
+        if(m_move.moveSpeed == Vector3.zero)
+        {
+            state = EnemyState.Idle;
         }
     }
 }

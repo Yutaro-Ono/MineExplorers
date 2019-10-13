@@ -11,7 +11,7 @@ public class EnemyAttack : MonoBehaviour
     // 攻撃したかどうかのフラグ
     public bool isAttack;
 
-    // 攻撃判定用のサーチエリア
+    // 攻撃判定用のコライダー
     [SerializeField] GameObject m_attackPoint;
 
     // Start is called before the first frame update
