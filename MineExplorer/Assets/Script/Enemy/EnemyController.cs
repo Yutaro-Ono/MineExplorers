@@ -23,6 +23,9 @@ public class EnemyController : MonoBehaviour
     // エネミーの移動(NavMeshAgent取得)
     EnemyMovement m_move;
 
+    // エネミーの攻撃開始エリア
+    [SerializeField] GameObject m_attackArea;
+
     // エネミーの攻撃判定コンポーネント取得
     EnemyAttack m_attack;
 
@@ -33,13 +36,13 @@ public class EnemyController : MonoBehaviour
 
         m_move = GetComponent<EnemyMovement>();
 
-        m_attack = GetComponent<EnemyAttack>();
+        m_attack = m_attackArea.GetComponent<EnemyAttack>();
     }
 
     void Update()
     {
         // 移動速度ベクトルのxとzの値が0より上だった時、移動していることを示す " Run " に設定
-        if (m_move.moveSpeed.x != Vector3.zero.x || m_move.moveSpeed.z != Vector3.zero.z && m_attack.isAttack == false)
+        if (m_move.moveSpeed.x != Vector3.zero.x || m_move.moveSpeed.z != Vector3.zero.z)
         {
             state = EnemyState.Run;
         }

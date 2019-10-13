@@ -36,7 +36,7 @@ public class SearchPlayer : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            isDetected = false;
+            //isDetected = false;
         }
     }
 }
