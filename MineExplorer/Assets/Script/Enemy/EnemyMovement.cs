@@ -25,7 +25,7 @@ public class EnemyMovement : MonoBehaviour
     private GameObject tagPlayer;
 
     // エネミーの索敵オブジェクト
-    [SerializeField] GameObject m_searchObj;
+    [SerializeField] GameObject m_searchArea;
     // エネミーの索敵処理コンポーネント
     private SearchPlayer m_searchComp;
 
@@ -43,7 +43,7 @@ public class EnemyMovement : MonoBehaviour
         tagPlayer = GameObject.Find("Player");
 
         // 索敵コンポーネントの取得
-        m_searchComp = m_searchObj.GetComponent<SearchPlayer>();
+        m_searchComp = m_searchArea.GetComponent<SearchPlayer>();
     }
 
     // Update is called once per frame

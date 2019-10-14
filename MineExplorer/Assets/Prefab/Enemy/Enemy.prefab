@@ -934,7 +934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyNav: {fileID: 6201858690650253234}
   moveSpeed: {x: 0, y: 0, z: 0}
-  m_searchObj: {fileID: 4391726045871121549}
+  m_searchArea: {fileID: 4391726045871121549}
 --- !u!114 &1138365666619528595
 MonoBehaviour:
   m_ObjectHideFlags: 0
