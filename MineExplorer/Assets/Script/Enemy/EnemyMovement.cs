@@ -69,9 +69,6 @@ public class EnemyMovement : MonoBehaviour
         {
             // ターゲット(プレイヤー位置)に自動移動する
             enemyNav.destination = tagPlayer.transform.position;
-
-            // NavMeshAgentの加速度を移動速度として保管
-            moveSpeed = enemyNav.velocity;
         }
         // 見つけていなかった場合
         else
@@ -83,6 +80,9 @@ public class EnemyMovement : MonoBehaviour
             Patrol();
 
         }
+
+        // NavMeshAgentの加速度を移動速度として保管
+        moveSpeed = enemyNav.velocity;
 
 
     }
