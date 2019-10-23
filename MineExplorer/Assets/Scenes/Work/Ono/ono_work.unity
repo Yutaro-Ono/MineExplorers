@@ -2683,6 +2683,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PostProcessController
       objectReference: {fileID: 0}
+    - target: {fileID: 9066192739744529433, guid: 970f116512f983243873696b97ccf2fb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7446184360962962098, guid: 970f116512f983243873696b97ccf2fb,
         type: 3}
       propertyPath: m_LocalPosition.x
