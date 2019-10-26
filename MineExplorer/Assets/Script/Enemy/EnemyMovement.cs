@@ -40,15 +40,20 @@ public class EnemyMovement : MonoBehaviour
         m_patrolTimer = 0.0f;
 
         // 巡回地点の親オブジェクトを取得
-        GameObject patrolPoint = GameObject.Find("EnemyPatrolPoint");
+        GameObject patrolParent = GameObject.Find("EnemyPatrolPoint");
+        if(patrolParent == null)
+        {
+            Debug.Log("エネミー:巡回地点の親オブジェクトが取得できてないよ！");
+        }
+
         // 巡回地点がいくつあるかを保存
-        m_allPoint = patrolPoint.transform.childCount;
+        m_allPoint = patrolParent.transform.childCount;
         // 巡回地点分の配列を確保
         m_patrolPos = new Transform[m_allPoint];
         // 巡回地点(子)の取得
         for(int i = 0; i < m_allPoint; i++)
         {
-            m_patrolPos[i] = patrolPoint.transform.Find("point" + (i + 1));
+            m_patrolPos[i] = patrolParent.transform.Find("point" + (i + 1));
         }
 
         // 自身のNavMeshAgentの取得
