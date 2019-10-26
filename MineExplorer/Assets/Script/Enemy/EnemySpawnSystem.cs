@@ -33,11 +33,14 @@ public class EnemySpawnSystem : MonoBehaviour
 
 
     // エネミー出現のトリガーとなるタイマー
-    static float m_spawnTimer = 1.0f;
+    static float m_spawnTimer = 0.3f;
     // ループ中、時間をカウントするタイマー
     [SerializeField] float m_countTimer;
 
 
+    // 登場エフェクト
+    GameObject explosionPrefab;
+    GameObject explosionObj;
 
 
     // Start is called before the first frame update
@@ -49,7 +52,7 @@ public class EnemySpawnSystem : MonoBehaviour
         // エネミーのプレハブをResourcesフォルダから全種類取得
         for (int i = 0; i < (int)ENEMY_TYPE.ALL_ENEMY; i++)
         {
-            m_enemyPrefab[i] = (GameObject)Resources.Load("Enemy" + (i + 1));
+            m_enemyPrefab[i] = (GameObject)Resources.Load("Enemy/Enemy" + (i + 1));
         }
 
 
@@ -70,6 +73,10 @@ public class EnemySpawnSystem : MonoBehaviour
         {
             m_spawnPoint[i] = spawnParent.transform.Find("point" + (i + 1));
         }
+
+
+        // エフェクトプレハブをResourcesフォルダから取得
+        explosionPrefab = (GameObject)Resources.Load("Particle/Explosion");
 
 
         m_nowEnemy = 0;
@@ -102,6 +109,9 @@ public class EnemySpawnSystem : MonoBehaviour
         m_enemyObj = Instantiate( m_enemyPrefab[(int)in_type], 
                                   m_spawnPoint[in_spawnPoint].transform.position, 
                                   Quaternion.identity);
+
+        // エフェクトの生成
+        explosionObj = Instantiate(explosionPrefab, m_spawnPoint[in_spawnPoint].transform.position, Quaternion.identity);
     }
 
     // 出現中エネミー数ゲッター
