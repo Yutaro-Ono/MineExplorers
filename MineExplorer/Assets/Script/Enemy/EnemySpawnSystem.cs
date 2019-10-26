@@ -33,7 +33,7 @@ public class EnemySpawnSystem : MonoBehaviour
 
 
     // エネミー出現のトリガーとなるタイマー
-    static float m_spawnTimer = 0.3f;
+    static float m_spawnTimer = 0.2f;
     // ループ中、時間をカウントするタイマー
     [SerializeField] float m_countTimer;
 
@@ -91,7 +91,7 @@ public class EnemySpawnSystem : MonoBehaviour
         if(m_countTimer > m_spawnTimer && m_nowEnemy < m_maxEnemy)
         {
             // ランダムなポイントからエネミーAを出現させる
-            SpawnEnemy(ENEMY_TYPE.ENEMY_A, Random.Range(0, m_allPoint));
+            SpawnEnemy(Random.Range(0, (int)ENEMY_TYPE.ALL_ENEMY), Random.Range(0, m_allPoint));
 
             // エネミーの出現数を更新
             m_nowEnemy++;
@@ -104,7 +104,7 @@ public class EnemySpawnSystem : MonoBehaviour
     }
 
     // エネミーをinstantiateする関数(第1引数:生成するエネミーのタイプ, 第2引数:スポーン地点の指定)
-    void SpawnEnemy(ENEMY_TYPE in_type, int in_spawnPoint)
+    void SpawnEnemy(int in_type, int in_spawnPoint)
     {
         m_enemyObj = Instantiate( m_enemyPrefab[(int)in_type], 
                                   m_spawnPoint[in_spawnPoint].transform.position, 

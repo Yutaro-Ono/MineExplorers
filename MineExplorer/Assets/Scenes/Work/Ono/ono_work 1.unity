@@ -21594,7 +21594,7 @@ Rigidbody:
   m_CollisionDetection: 0
 --- !u!4 &2042462516 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1014444222, guid: d45693ee3e00a3441902141d658046de,
+  m_CorrespondingSourceObject: {fileID: 2042462516, guid: 0732e9786b9282d4bbcb4873f9041030,
     type: 3}
   m_PrefabInstance: {fileID: 2130331721}
   m_PrefabAsset: {fileID: 0}
@@ -21813,56 +21813,56 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 965088613}
     m_Modifications:
-    - target: {fileID: 1014444218, guid: d45693ee3e00a3441902141d658046de, type: 3}
+    - target: {fileID: 1441262938, guid: 0732e9786b9282d4bbcb4873f9041030, type: 3}
       propertyPath: m_Name
       value: Boximon Cyclopes
       objectReference: {fileID: 0}
-    - target: {fileID: 1014444222, guid: d45693ee3e00a3441902141d658046de, type: 3}
+    - target: {fileID: 2042462516, guid: 0732e9786b9282d4bbcb4873f9041030, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1014444222, guid: d45693ee3e00a3441902141d658046de, type: 3}
+    - target: {fileID: 2042462516, guid: 0732e9786b9282d4bbcb4873f9041030, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1014444222, guid: d45693ee3e00a3441902141d658046de, type: 3}
+    - target: {fileID: 2042462516, guid: 0732e9786b9282d4bbcb4873f9041030, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1014444222, guid: d45693ee3e00a3441902141d658046de, type: 3}
+    - target: {fileID: 2042462516, guid: 0732e9786b9282d4bbcb4873f9041030, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 1014444222, guid: d45693ee3e00a3441902141d658046de, type: 3}
+    - target: {fileID: 2042462516, guid: 0732e9786b9282d4bbcb4873f9041030, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 1014444222, guid: d45693ee3e00a3441902141d658046de, type: 3}
+    - target: {fileID: 2042462516, guid: 0732e9786b9282d4bbcb4873f9041030, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 1014444222, guid: d45693ee3e00a3441902141d658046de, type: 3}
+    - target: {fileID: 2042462516, guid: 0732e9786b9282d4bbcb4873f9041030, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1014444222, guid: d45693ee3e00a3441902141d658046de, type: 3}
+    - target: {fileID: 2042462516, guid: 0732e9786b9282d4bbcb4873f9041030, type: 3}
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 1014444222, guid: d45693ee3e00a3441902141d658046de, type: 3}
+    - target: {fileID: 2042462516, guid: 0732e9786b9282d4bbcb4873f9041030, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1014444222, guid: d45693ee3e00a3441902141d658046de, type: 3}
+    - target: {fileID: 2042462516, guid: 0732e9786b9282d4bbcb4873f9041030, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1014444222, guid: d45693ee3e00a3441902141d658046de, type: 3}
+    - target: {fileID: 2042462516, guid: 0732e9786b9282d4bbcb4873f9041030, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d45693ee3e00a3441902141d658046de, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 0732e9786b9282d4bbcb4873f9041030, type: 3}
 --- !u!4 &2133006123 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2200367674589656376, guid: 4d49b89cdcf83064199e1d9e3b04b5a2,
@@ -22028,7 +22028,7 @@ PrefabInstance:
     - target: {fileID: 2200367674589656383, guid: 4d49b89cdcf83064199e1d9e3b04b5a2,
         type: 3}
       propertyPath: m_maxEnemy
-      value: 150
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 2200367673140535324, guid: 4d49b89cdcf83064199e1d9e3b04b5a2,
         type: 3}
