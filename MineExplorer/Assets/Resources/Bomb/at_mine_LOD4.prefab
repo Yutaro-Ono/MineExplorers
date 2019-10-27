@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3300726}
   - component: {fileID: 2330356}
   m_Layer: 0
-  m_Name: at_mine_LOD0
+  m_Name: at_mine_LOD4
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 119916}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0462, z: 0}
+  m_LocalPosition: {x: 1.6088296, y: 0.07316667, z: -1.5887165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
