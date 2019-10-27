@@ -33,7 +33,7 @@ public class EnemySpawnSystem : MonoBehaviour
 
 
     // エネミー出現のトリガーとなるタイマー
-    static float m_spawnTimer = 0.2f;
+    static float m_spawnTimer = 10.0f;
     // ループ中、時間をカウントするタイマー
     [SerializeField] float m_countTimer;
 
