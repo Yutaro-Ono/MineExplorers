@@ -33,7 +33,7 @@ public class EnemySpawnSystem : MonoBehaviour
 
 
     // エネミー出現のトリガーとなるタイマー
-    static float m_spawnTimer = 0.2f;
+    [SerializeField] float m_spawnTimer = 0.2f;
     // ループ中、時間をカウントするタイマー
     [SerializeField] float m_countTimer;
 
@@ -58,7 +58,7 @@ public class EnemySpawnSystem : MonoBehaviour
 
         // スポーン地点の親オブジェクトを取得
         GameObject spawnParent = GameObject.Find("EnemySpawnPoint");
-        if(spawnParent == null)
+        if (spawnParent == null)
         {
             Debug.Log("エネミー:スポーン地点の親オブジェクトが取得できてないよ！");
         }
@@ -69,7 +69,7 @@ public class EnemySpawnSystem : MonoBehaviour
         m_spawnPoint = new Transform[m_allPoint];
 
         // スポーン地点(子)の取得
-        for(int i = 0; i < m_allPoint; i++)
+        for (int i = 0; i < m_allPoint; i++)
         {
             m_spawnPoint[i] = spawnParent.transform.Find("point" + (i + 1));
         }
