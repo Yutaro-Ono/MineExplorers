@@ -18,13 +18,18 @@ public class EnemyMovement : MonoBehaviour
     // エネミーの巡回用タイマー(指定秒ごとに目的地を変える)
     private float m_patrolTimer;
 
-    // 巡回時の目標地点座標
-    private Vector3 m_targetPos;
+    // 巡回する地点のtransform(EnemyPatrolPointの子オブジェクト座標)
+    [SerializeField] private Transform[] m_patrolPos;
+    // 目的地点の総数
+    private int m_allPoint;
+    // 次回目的地設定用ID
+    private int m_nextPatrolPos = 0;
+
 
     // ターゲティングするプレイヤーオブジェクト格納用
     private GameObject tagPlayer;
 
-    // エネミーの索敵オブジェクト
+    // エネミーの索敵範囲オブジェクト
     [SerializeField] GameObject m_searchArea;
     // エネミーの索敵処理コンポーネント
     private SearchPlayer m_searchComp;
@@ -33,8 +38,23 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         m_patrolTimer = 0.0f;
-        m_targetPos = new Vector3(0.0f, 0.0f, 0.0f);
 
+        // 巡回地点の親オブジェクトを取得
+        GameObject patrolParent = GameObject.Find("EnemyPatrolPoint");
+        if(patrolParent == null)
+        {
+            Debug.Log("エネミー:巡回地点の親オブジェクトが取得できてないよ！");
+        }
+
+        // 巡回地点がいくつあるかを保存
+        m_allPoint = patrolParent.transform.childCount;
+        // 巡回地点分の配列を確保
+        m_patrolPos = new Transform[m_allPoint];
+        // 巡回地点(子)の取得
+        for(int i = 0; i < m_allPoint; i++)
+        {
+            m_patrolPos[i] = patrolParent.transform.Find("point" + (i + 1));
+        }
 
         // 自身のNavMeshAgentの取得
         enemyNav = gameObject.GetComponent<NavMeshAgent>();
@@ -54,23 +74,25 @@ public class EnemyMovement : MonoBehaviour
         {
             // ターゲット(プレイヤー位置)に自動移動する
             enemyNav.destination = tagPlayer.transform.position;
-
-            // NavMeshAgentの加速度を移動速度として保管
-            moveSpeed = enemyNav.velocity;
         }
         // 見つけていなかった場合
         else
         {
-            // NavMesh停止
-            enemyNav.velocity = new Vector3(0.0f, 0.0f, 0.0f);
-            // 移動速度を0に
-            moveSpeed = new Vector3(0.0f, 0.0f, 0.0f);
+            //// NavMesh停止
+            //enemyNav.velocity = new Vector3(0.0f, 0.0f, 0.0f);
+            //// 移動速度を0に
+            //moveSpeed = new Vector3(0.0f, 0.0f, 0.0f);
+            Patrol();
+
         }
+
+        // NavMeshAgentの加速度を移動速度として保管
+        moveSpeed = enemyNav.velocity;
 
 
     }
 
-    // エネミーの巡回関数(廃止)
+    // エネミーの巡回関数
     private void Patrol()
     {
         float timer = 5.0f;
@@ -81,14 +103,14 @@ public class EnemyMovement : MonoBehaviour
             m_patrolTimer = timer;
         }
 
-        // パトロールタイマーが更新されたら目的地を新規設定
+        // パトロールタイマーが更新されたら巡回地点を新規設定
         if(m_patrolTimer == timer)
         {
-            m_targetPos = new Vector3(Random.Range(-1000.0f, 3000.0f), 0.0f, Random.Range(-1000.0f, 3000.0f));
+            m_nextPatrolPos = Random.Range(0, m_allPoint);
 
         }
 
-        enemyNav.destination = m_targetPos;
+        enemyNav.destination = m_patrolPos[m_nextPatrolPos].position;
 
         // 巡回時間を減らす
         m_patrolTimer -= Time.deltaTime;
