@@ -672,8 +672,8 @@ GameObject:
   - component: {fileID: 1441262940}
   - component: {fileID: 1441262939}
   m_Layer: 0
-  m_Name: Boximon Cyclopes
-  m_TagString: Untagged
+  m_Name: Enemy2
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -806,9 +806,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafbde9ce218a9a45b595223286e2016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_patrolObj: {fileID: 0}
   enemyNav: {fileID: 0}
   moveSpeed: {x: 0, y: 0, z: 0}
-  m_patrolPos: []
+  changeNextPointTimer: 5
+  m_patrolTimer: 0
+  m_nextPatrolPos: 0
   m_searchArea: {fileID: 388894314}
 --- !u!195 &1441262939
 NavMeshAgent:
