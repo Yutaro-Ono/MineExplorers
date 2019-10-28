@@ -17,10 +17,11 @@ public class PlayerDropBomb : MonoBehaviour
     //置くところ
     Transform m_creatBombPoint;
     Player m_player0;
+
     // Start is called before the first frame update
     void Start()
     {
-        m_creatBombPoint = transform.Find("CreatBombPoint");
+        m_creatBombPoint = transform.Find("CreateBombPoint");
         //オブジェクトロード
         m_bombResources = (GameObject)Resources.Load("Bomb/at_mine_LOD5");
     }
@@ -32,7 +33,7 @@ public class PlayerDropBomb : MonoBehaviour
         //if (m_player0.GetButtonDown("PutMine"))
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            m_bombPrefab = Instantiate(m_bombResources, m_creatBombPoint.transform.position,Quaternion.identity);
+            m_bombPrefab = Instantiate(m_bombResources, m_creatBombPoint.transform.position, Quaternion.identity);
         }
     }
 }

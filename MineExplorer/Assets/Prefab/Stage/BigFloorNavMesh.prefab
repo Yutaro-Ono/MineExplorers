@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2993337353365390671}
   - component: {fileID: 5048914450535613906}
   - component: {fileID: 4589322899285220504}
-  m_Layer: 0
-  m_Name: SampleStage 1
-  m_TagString: Untagged
+  m_Layer: 15
+  m_Name: BigFloorNavMesh
+  m_TagString: Stage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

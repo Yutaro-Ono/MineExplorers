@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 419313787504879440}
   - component: {fileID: 419313787504879441}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: TouchPoint
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,9 +57,9 @@ GameObject:
   - component: {fileID: 419313787643537588}
   - component: {fileID: 419313787643537591}
   - component: {fileID: 419313787643537590}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Stone1
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,7 +131,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419313787643537585}
-  m_Material: {fileID: 13400000, guid: c2815a7ab32e42c4bb42f59caacb8ec1, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -163,9 +163,9 @@ GameObject:
   m_Component:
   - component: {fileID: 419313787748244625}
   - component: {fileID: 419313787748244630}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: TouchPoint
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -207,9 +207,9 @@ GameObject:
   m_Component:
   - component: {fileID: 419313787849030691}
   - component: {fileID: 419313787849030688}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: TouchPoint
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -254,9 +254,9 @@ GameObject:
   - component: {fileID: 419313788532889752}
   - component: {fileID: 419313788532889755}
   - component: {fileID: 419313788532889754}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Stone2
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -328,7 +328,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419313788532889749}
-  m_Material: {fileID: 13400000, guid: c2815a7ab32e42c4bb42f59caacb8ec1, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -363,9 +363,9 @@ GameObject:
   - component: {fileID: 419313788547324238}
   - component: {fileID: 419313788547324233}
   - component: {fileID: 419313788547324232}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Stone4
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -437,7 +437,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419313788547324235}
-  m_Material: {fileID: 13400000, guid: c2815a7ab32e42c4bb42f59caacb8ec1, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -468,8 +468,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 419313788556359073}
-  m_Layer: 0
-  m_Name: Object
+  m_Layer: 13
+  m_Name: StoneObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -503,9 +503,9 @@ GameObject:
   m_Component:
   - component: {fileID: 419313788791455871}
   - component: {fileID: 419313788791455868}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: TouchPoint
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -550,9 +550,9 @@ GameObject:
   - component: {fileID: 419313788857654164}
   - component: {fileID: 419313788857654167}
   - component: {fileID: 419313788857654166}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Stone3
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -624,7 +624,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419313788857654161}
-  m_Material: {fileID: 13400000, guid: c2815a7ab32e42c4bb42f59caacb8ec1, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2

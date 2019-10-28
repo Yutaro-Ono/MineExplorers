@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6713842881699769295}
   - component: {fileID: 6713842881699769294}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: SwitchObj3
-  m_TagString: Untagged
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -58,9 +58,9 @@ GameObject:
   - component: {fileID: 6713842881989478277}
   - component: {fileID: 6713842881989478282}
   - component: {fileID: 6713842881989478283}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -147,9 +147,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6713842882110323841}
   - component: {fileID: 6713842882110323846}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: SwitchObj1
-  m_TagString: Untagged
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -196,9 +196,9 @@ GameObject:
   - component: {fileID: 6713842882127298579}
   - component: {fileID: 6713842882127298576}
   - component: {fileID: 6713842882127298577}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Torus
-  m_TagString: Untagged
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -595,54 +595,54 @@ MonoBehaviour:
   m_Textures2: []
   m_Textures3: []
   m_Tangents:
-  - {x: 0.86602545, y: -0.5, z: 0.000000006342608, w: -1}
-  - {x: 0.8660254, y: -0.5, z: -0.0000000128806095, w: -1}
-  - {x: -0.7071068, y: 0, z: -0.7071068, w: -1}
-  - {x: -0.7071068, y: 0, z: -0.7071068, w: -1}
-  - {x: -0.8660253, y: -0.5000001, z: -0.00000000842743, w: -1}
-  - {x: -0.8660254, y: -0.5000001, z: -0.000000064833564, w: -1}
-  - {x: 0.8660254, y: -0.5, z: -0.0000000128806095, w: -1}
-  - {x: 0.8660254, y: -0.50000006, z: -0.000000018775827, w: -1}
-  - {x: -0.7071068, y: 0, z: -0.7071068, w: -1}
-  - {x: -0.7071068, y: 0, z: -0.7071068, w: -1}
-  - {x: -0.8660254, y: -0.5000001, z: -0.000000064833564, w: -1}
-  - {x: -0.8660254, y: -0.5000001, z: -0.00000009458369, w: -1}
-  - {x: 0.8660254, y: 0.50000006, z: 0.00000006059608, w: -1}
-  - {x: 0.8660254, y: 0.50000006, z: 0.00000004913268, w: -1}
-  - {x: -0.7071068, y: 0, z: 0.70710677, w: -1}
-  - {x: -0.7071068, y: 0, z: 0.70710677, w: -1}
-  - {x: -0.8660253, y: 0.5000002, z: -0.00000014759257, w: -1}
-  - {x: -0.8660253, y: 0.5000002, z: -0.00000003684817, w: -1}
-  - {x: 0.8660254, y: 0.50000006, z: 0.00000004913268, w: -1}
-  - {x: 0.8660253, y: 0.5000001, z: 0.000000037669277, w: -1}
-  - {x: -0.7071068, y: 0, z: 0.70710677, w: -1}
-  - {x: -0.7071068, y: 0, z: 0.70710677, w: -1}
-  - {x: -0.8660253, y: 0.5000002, z: -0.00000003684817, w: -1}
-  - {x: -0.8660254, y: 0.5000002, z: 0.000000073896274, w: -1}
-  - {x: 0.86602545, y: 0.49999997, z: 0.000000011013256, w: -1}
-  - {x: 0.86602545, y: 0.4999999, z: 0.00000011156253, w: -1}
+  - {x: 0.86602545, y: -0.50000006, z: -0.000000011542391, w: -1}
+  - {x: 0.86602545, y: -0.50000006, z: -0.000000011542391, w: -1}
+  - {x: -0.70710677, y: 0, z: -0.70710677, w: -1}
+  - {x: -0.70710677, y: 0, z: -0.70710677, w: -1}
+  - {x: -0.8660253, y: -0.5000002, z: 0, w: -1}
+  - {x: -0.8660253, y: -0.5000002, z: 0, w: -1}
+  - {x: 0.86602545, y: -0.50000006, z: -0.000000011542391, w: -1}
+  - {x: 0.86602545, y: -0.50000006, z: 0, w: -1}
+  - {x: -0.70710677, y: 0, z: -0.70710677, w: -1}
+  - {x: -0.70710677, y: 0, z: -0.70710677, w: -1}
+  - {x: -0.8660253, y: -0.5000002, z: 0, w: -1}
+  - {x: -0.8660253, y: -0.5000001, z: 0, w: -1}
+  - {x: 0.8660254, y: 0.50000006, z: 0.000000011542391, w: -1}
+  - {x: 0.8660253, y: 0.50000006, z: 0.00000001154239, w: -1}
+  - {x: -0.7071068, y: 0, z: 0.7071067, w: -1}
+  - {x: -0.7071068, y: 0, z: 0.7071067, w: -1}
+  - {x: -0.8660253, y: 0.5000001, z: -0.00000001154239, w: -1}
+  - {x: -0.8660253, y: 0.5000002, z: 0, w: -1}
+  - {x: 0.8660253, y: 0.50000006, z: 0.00000001154239, w: -1}
+  - {x: 0.8660253, y: 0.50000006, z: 0, w: -1}
+  - {x: -0.7071068, y: 0, z: 0.7071067, w: -1}
+  - {x: -0.7071068, y: 0, z: 0.7071067, w: -1}
+  - {x: -0.8660253, y: 0.5000002, z: 0, w: -1}
+  - {x: -0.8660253, y: 0.5000002, z: 0.000000011542394, w: -1}
+  - {x: 0.86602545, y: 0.5, z: -0.000000023084782, w: -1}
+  - {x: 0.86602545, y: 0.5, z: 0, w: -1}
   - {x: 0.7071069, y: 0, z: 0.7071067, w: -1}
   - {x: 0.7071069, y: 0, z: 0.7071067, w: -1}
-  - {x: -0.8660254, y: 0.5000002, z: 0.000000073896274, w: -1}
-  - {x: -0.8660253, y: 0.5000001, z: 0.00000009007365, w: -1}
-  - {x: 0.86602545, y: 0.4999999, z: 0.00000011156253, w: -1}
-  - {x: 0.86602545, y: 0.49999985, z: 0.00000018545576, w: -1}
+  - {x: -0.8660253, y: 0.5000001, z: 0, w: -1}
+  - {x: -0.8660253, y: 0.50000006, z: -0.000000011542393, w: -1}
+  - {x: 0.86602545, y: 0.5, z: 0, w: -1}
+  - {x: 0.86602545, y: 0.49999994, z: 0, w: -1}
   - {x: 0.7071069, y: 0, z: 0.7071067, w: -1}
   - {x: 0.7071069, y: 0, z: 0.7071067, w: -1}
-  - {x: -0.8660253, y: 0.5000001, z: 0.00000009007365, w: -1}
-  - {x: -0.8660253, y: 0.5000002, z: 0.00000011957903, w: -1}
-  - {x: 0.8660253, y: -0.5000002, z: 0.000000051876757, w: -1}
-  - {x: 0.8660253, y: -0.5000001, z: 0.000000016507471, w: -1}
-  - {x: 0.7071067, y: 0, z: -0.7071068, w: -1}
-  - {x: 0.7071067, y: 0, z: -0.7071068, w: -1}
-  - {x: -0.86602527, y: -0.50000024, z: -0.000000115365125, w: -1}
-  - {x: -0.86602527, y: -0.50000024, z: -0.00000006463135, w: -1}
-  - {x: 0.8660253, y: -0.5000001, z: 0.000000016507471, w: -1}
-  - {x: 0.8660254, y: -0.5000001, z: -0.000000018861813, w: -1}
-  - {x: 0.7071067, y: 0, z: -0.7071068, w: -1}
-  - {x: 0.7071067, y: 0, z: -0.7071068, w: -1}
-  - {x: -0.86602527, y: -0.50000024, z: -0.00000006463135, w: -1}
-  - {x: -0.8660253, y: -0.50000024, z: -5.695698e-10, w: -1}
+  - {x: -0.8660253, y: 0.50000006, z: -0.000000011542393, w: -1}
+  - {x: -0.8660254, y: 0.5000001, z: 0, w: -1}
+  - {x: 0.8660253, y: -0.5000001, z: 0, w: -1}
+  - {x: 0.8660253, y: -0.5000001, z: 0, w: -1}
+  - {x: 0.70710677, y: 0, z: -0.7071069, w: -1}
+  - {x: 0.70710677, y: 0, z: -0.7071069, w: -1}
+  - {x: -0.86602527, y: -0.5000002, z: 0, w: -1}
+  - {x: -0.86602527, y: -0.5000002, z: -0.00000001154239, w: -1}
+  - {x: 0.8660253, y: -0.5000001, z: 0, w: -1}
+  - {x: 0.8660253, y: -0.5000001, z: 0, w: -1}
+  - {x: 0.70710677, y: 0, z: -0.7071069, w: -1}
+  - {x: 0.70710677, y: 0, z: -0.7071069, w: -1}
+  - {x: -0.86602527, y: -0.5000002, z: -0.00000001154239, w: -1}
+  - {x: -0.86602527, y: -0.5000002, z: -0.000000011542389, w: -1}
   m_Colors: []
   m_UnwrapParameters:
     m_HardAngle: 88
@@ -682,9 +682,9 @@ GameObject:
   - component: {fileID: 6713842882210703089}
   - component: {fileID: 6713842882210703094}
   - component: {fileID: 6713842882210703095}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Torus
-  m_TagString: Untagged
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1165,9 +1165,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6713842882288764529}
   - component: {fileID: 6713842882288764528}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: SwitchObj2
-  m_TagString: Untagged
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1213,9 +1213,9 @@ GameObject:
   - component: {fileID: 6713842882575495895}
   - component: {fileID: 6713842882575495892}
   - component: {fileID: 6713842882575495893}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1301,9 +1301,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6713842882643536272}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: SwitchPoint
-  m_TagString: Untagged
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1339,9 +1339,9 @@ GameObject:
   - component: {fileID: 6713842882731224368}
   - component: {fileID: 6713842882731224369}
   - component: {fileID: 6713842882731224374}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Torus
-  m_TagString: Untagged
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1824,9 +1824,9 @@ GameObject:
   - component: {fileID: 6713842883010598811}
   - component: {fileID: 6713842883010598808}
   - component: {fileID: 6713842883010598809}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1913,9 +1913,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6713842883126706313}
   - component: {fileID: 6713842883126706312}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: SwitchObj4
-  m_TagString: Untagged
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1961,9 +1961,9 @@ GameObject:
   - component: {fileID: 6713842883276000077}
   - component: {fileID: 6713842883276000114}
   - component: {fileID: 6713842883276000115}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2053,9 +2053,9 @@ GameObject:
   - component: {fileID: 6713842883650378500}
   - component: {fileID: 6713842883650378501}
   - component: {fileID: 6713842883650378506}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Torus
-  m_TagString: Untagged
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

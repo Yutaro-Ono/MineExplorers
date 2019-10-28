@@ -81,7 +81,7 @@ public class EnemySpawnSystem : MonoBehaviour
 
 
         // エフェクトプレハブをResourcesフォルダから取得
-        explosionPrefab = (GameObject)Resources.Load("Particle/Explosion");
+        explosionPrefab = (GameObject)Resources.Load("Particle/BombExplosion");
 
 
         m_nowEnemy = 0;

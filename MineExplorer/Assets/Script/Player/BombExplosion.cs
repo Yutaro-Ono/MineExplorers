@@ -14,7 +14,7 @@ public class BombExplosion : MonoBehaviour
     bool m_explosion = false;
     void Start()
     {
-        m_particleResources = (GameObject)Resources.Load("Particle/Explosion 2");
+        m_particleResources = (GameObject)Resources.Load("Particle/BombExplosion");
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -25,7 +25,7 @@ public class BombExplosion : MonoBehaviour
                 m_explosion = true;
                 //パーティクル生成
                 m_particlePrefub = Instantiate(m_particleResources, this.transform.position, Quaternion.identity);
-                Destroy(this.gameObject);
+                Destroy(gameObject);
             }
         }
     }

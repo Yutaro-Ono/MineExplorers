@@ -7,6 +7,11 @@ TagManager:
   - Enemy
   - EnemyAttack
   - EnemySearch
+  - Bomb
+  - BombExplosion
+  - Stone
+  - Switch
+  - Stage
   layers:
   - Default
   - TransparentFX
@@ -17,13 +22,13 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Bomb
+  - Explosion
+  - Stone
+  - Switch
+  - Stage
   - 
   - 
   - 

@@ -14,13 +14,21 @@ public class Particle : MonoBehaviour
     
     void Start()
     {
+
+        m_particle = GameObject.Find("Shockwave");
+
         m_particleSystem = m_particle.GetComponent<ParticleSystem>();
+
+        if(m_particleSystem == null)
+        {
+            Debug.Log("パーティクル:ParticleSystemコンポーネント取得失敗");
+        }
     }
     void Update()
     {
-        if (m_particleSystem.isStopped == true) 
+        if (m_particleSystem.IsAlive() == false) 
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 }

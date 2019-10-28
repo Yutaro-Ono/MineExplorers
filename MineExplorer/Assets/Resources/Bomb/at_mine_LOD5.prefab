@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2589700691731617874}
   m_Layer: 0
   m_Name: at_mine_LOD5
-  m_TagString: Player
+  m_TagString: Bomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,4 +106,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d219f8d1d3eeca47b99c7659ffa3511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ParticlePrefub: {fileID: 100010, guid: dc328186aabadc44d914ffc4a8d75fd6, type: 3}
+  m_particlePrefub: {fileID: 0}
