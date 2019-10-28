@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿//----------------------------------------------------//
+// 爆弾を置く
+//                                   2019 sora hanada
+//---------------------------------------------------//
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Rewired;
@@ -11,12 +15,12 @@ public class PlayerDropBomb : MonoBehaviour
     [SerializeField]
     GameObject m_bombPrefab;
     //置くところ
-    [SerializeField]
-    GameObject m_creatBombPoint;
+    Transform m_creatBombPoint;
     Player m_player0;
     // Start is called before the first frame update
     void Start()
     {
+        m_creatBombPoint = transform.Find("CreatBombPoint");
         //オブジェクトロード
         m_bombResources = (GameObject)Resources.Load("Bomb/at_mine_LOD5");
     }
