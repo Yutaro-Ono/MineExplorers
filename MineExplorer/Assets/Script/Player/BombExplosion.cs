@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿//----------------------------------------------------//
+// 爆発させてパーティクルを出す
+//                                   2019 sora hanada
+//---------------------------------------------------//
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -22091,7 +22091,7 @@ PrefabInstance:
     - target: {fileID: 2200367674589656383, guid: 4d49b89cdcf83064199e1d9e3b04b5a2,
         type: 3}
       propertyPath: m_maxEnemy
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2200367673140535324, guid: 4d49b89cdcf83064199e1d9e3b04b5a2,
         type: 3}

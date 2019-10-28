@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿//----------------------------------------------------//
+// 再生が終わったらパーティクルを削除する
+//                                   2019 sora hanada
+//---------------------------------------------------//using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

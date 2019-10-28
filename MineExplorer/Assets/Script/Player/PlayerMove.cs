@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿//----------------------------------------------------//
+// プレイヤーの動き（試作）
+//                                   2019 sora hanada
+//---------------------------------------------------//
+using UnityEngine;
 using Rewired;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
