@@ -6,19 +6,19 @@ using Rewired;
 public class PlayerDropBomb : MonoBehaviour
 {
     //ロードされるオブジェ
-    GameObject m_BombResources;
+    GameObject m_bombResources;
     //実際に置かれるプレハブ
     [SerializeField]
-    GameObject m_BombPrefab;
+    GameObject m_bombPrefab;
     //置くところ
     [SerializeField]
-    GameObject m_CreatBombPoint;
+    GameObject m_creatBombPoint;
     Player m_player0;
     // Start is called before the first frame update
     void Start()
     {
         //オブジェクトロード
-        m_BombResources = (GameObject)Resources.Load("Bomb/at_mine_LOD4");
+        m_bombResources = (GameObject)Resources.Load("Bomb/at_mine_LOD5");
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class PlayerDropBomb : MonoBehaviour
         //if (m_player0.GetButtonDown("PutMine"))
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            m_BombPrefab = Instantiate(m_BombResources, m_CreatBombPoint.transform.position,Quaternion.identity);
+            m_bombPrefab = Instantiate(m_bombResources, m_creatBombPoint.transform.position,Quaternion.identity);
         }
     }
 }

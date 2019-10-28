@@ -6,15 +6,23 @@ public class BombExplosion : MonoBehaviour
 {
     GameObject m_particleResources;
     [SerializeField]
-    GameObject m_ParticlePrefub;
+    GameObject m_particlePrefub;
+    bool m_explosion = false;
     void Start()
     {
-        m_particleResources = (GameObject)Resources.Load("Particle/Explosion2");
+        m_particleResources = (GameObject)Resources.Load("Particle/Explosion 2");
     }
     private void OnTriggerEnter(Collider other)
     {
-        m_ParticlePrefub = Instantiate(m_particleResources, this.transform.position, Quaternion.identity);
-        //パーティクル生成
-        Destroy(this);
+        if (other.gameObject.tag == "Enemy")
+        {
+            if (m_explosion == false)
+            {
+                m_explosion = true;
+                //パーティクル生成
+                m_particlePrefub = Instantiate(m_particleResources, this.transform.position, Quaternion.identity);
+                Destroy(this.gameObject);
+            }
+        }
     }
 }

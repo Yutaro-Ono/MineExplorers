@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class Particle : MonoBehaviour
 {
-    ParticleSystem m_ParticleSystem;
+    ParticleSystem m_particleSystem;
     //消す基準となるパーティクル
     [SerializeField]
-    GameObject m_Particle;
+    GameObject m_particle;
     
     void Start()
     {
-        m_ParticleSystem = m_Particle.GetComponent<ParticleSystem>();
+        m_particleSystem = m_particle.GetComponent<ParticleSystem>();
     }
     void Update()
     {
-        if (m_ParticleSystem.isStopped == true) 
+        if (m_particleSystem.isStopped == true) 
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }
