@@ -1,5 +1,8 @@
-﻿// エネミーをゲーム中、動的に生成するスポーンスクリプト
-//            2019 Yutaro Ono.
+﻿//-------------------------------------------------------------------------//
+// エネミーをゲーム中、動的に生成するスポーンスクリプト
+//               ※スポーン地点の親オブジェクトにアタッチします
+//                                                       2019 Yutaro Ono.
+//------------------------------------------------------------------------//
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,7 +36,7 @@ public class EnemySpawnSystem : MonoBehaviour
 
 
     // エネミー出現のトリガーとなるタイマー
-    static float m_spawnTimer = 10.0f;
+    [SerializeField] float m_spawnTimer = 0.2f;
     // ループ中、時間をカウントするタイマー
     [SerializeField] float m_countTimer;
 
@@ -41,6 +44,8 @@ public class EnemySpawnSystem : MonoBehaviour
     // 登場エフェクト
     GameObject explosionPrefab;
     GameObject explosionObj;
+    // エフェクトを使用するかどうか
+    public bool isUseEffect;
 
 
     // Start is called before the first frame update
@@ -58,7 +63,7 @@ public class EnemySpawnSystem : MonoBehaviour
 
         // スポーン地点の親オブジェクトを取得
         GameObject spawnParent = GameObject.Find("EnemySpawnPoint");
-        if(spawnParent == null)
+        if (spawnParent == null)
         {
             Debug.Log("エネミー:スポーン地点の親オブジェクトが取得できてないよ！");
         }
@@ -69,7 +74,7 @@ public class EnemySpawnSystem : MonoBehaviour
         m_spawnPoint = new Transform[m_allPoint];
 
         // スポーン地点(子)の取得
-        for(int i = 0; i < m_allPoint; i++)
+        for (int i = 0; i < m_allPoint; i++)
         {
             m_spawnPoint[i] = spawnParent.transform.Find("point" + (i + 1));
         }
@@ -99,8 +104,12 @@ public class EnemySpawnSystem : MonoBehaviour
             m_countTimer = 0.0f;
         }
 
-        // デルタタイムを取得
-        m_countTimer += Time.deltaTime;
+        if(m_nowEnemy < m_maxEnemy)
+        {
+            // デルタタイムを取得
+            m_countTimer += Time.deltaTime;
+        }
+
     }
 
     // エネミーをinstantiateする関数(第1引数:生成するエネミーのタイプ, 第2引数:スポーン地点の指定)
@@ -111,7 +120,11 @@ public class EnemySpawnSystem : MonoBehaviour
                                   Quaternion.identity);
 
         // エフェクトの生成
-        explosionObj = Instantiate(explosionPrefab, m_spawnPoint[in_spawnPoint].transform.position, Quaternion.identity);
+        if(isUseEffect == true)
+        {
+            explosionObj = Instantiate(explosionPrefab, m_spawnPoint[in_spawnPoint].transform.position, Quaternion.identity);
+        }
+
     }
 
     // 出現中エネミー数ゲッター
