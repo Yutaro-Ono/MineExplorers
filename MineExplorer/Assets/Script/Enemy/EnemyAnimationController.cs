@@ -44,5 +44,11 @@ public class EnemyAnimationController : MonoBehaviour
             m_anim.SetBool("Run Forward", false);
             m_anim.SetTrigger("Attack 02");
         }
+
+        // 死亡モーション
+        if(m_enemyCtrl.state == EnemyController.EnemyState.Dead)
+        {
+            m_anim.SetTrigger("Die");
+        }
     }
 }
