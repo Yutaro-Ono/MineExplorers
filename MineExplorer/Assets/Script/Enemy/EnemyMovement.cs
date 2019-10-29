@@ -10,8 +10,11 @@ using UnityEngine.AI;
 public class EnemyMovement : MonoBehaviour
 {
 
+    // エネミーコントローラー
+    private EnemyController m_enemyCtrl;
+
     // パトロールマネージャー(プレイヤー、巡回地点の座標情報が入っている)
-    EnemyPatrolManager patrolManager;
+    private EnemyPatrolManager patrolManager;
     // マネージャーを保管している巡回地点オブジェクト
     [SerializeField] GameObject m_patrolObj;
 
@@ -40,6 +43,9 @@ public class EnemyMovement : MonoBehaviour
     {
         m_patrolTimer = 0.0f;
 
+        // EnemyController取得
+        m_enemyCtrl = gameObject.GetComponent<EnemyController>();
+
         // パトロール地点の親を検索
         m_patrolObj = GameObject.Find("EnemyPatrolPoint");
         // パトロールマネージャーを取得
@@ -56,26 +62,33 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // エネミーがプレイヤーを見つけていた場合、プレイヤーを追尾
-        if(m_searchComp.isDetected == true)
+        // エネミーが死亡していない場合
+        if(m_enemyCtrl.state != EnemyController.EnemyState.Dead)
         {
-            // ターゲット(プレイヤー位置)に自動移動する
-            enemyNav.destination = patrolManager.GetPlayerObj().transform.position;
+            // エネミーがプレイヤーを見つけていた場合、プレイヤーを追尾
+            if (m_searchComp.isDetected == true)
+            {
+                // ターゲット(プレイヤー位置)に自動移動する
+                enemyNav.destination = patrolManager.GetPlayerObj().transform.position;
+            }
+            // 見つけていなかった場合
+            else
+            {
+
+                Patrol();
+
+            }
+
+            // NavMeshAgentの加速度を移動速度として保管
+            moveSpeed = enemyNav.velocity;
         }
-        // 見つけていなかった場合
         else
         {
-            //// NavMesh停止
-            //enemyNav.velocity = new Vector3(0.0f, 0.0f, 0.0f);
-            //// 移動速度を0に
-            //moveSpeed = new Vector3(0.0f, 0.0f, 0.0f);
-            Patrol();
-
+            // NavMesh停止
+            enemyNav.velocity = new Vector3(0.0f, 0.0f, 0.0f);
+            // 移動速度を0に
+            moveSpeed = new Vector3(0.0f, 0.0f, 0.0f);
         }
-
-        // NavMeshAgentの加速度を移動速度として保管
-        moveSpeed = enemyNav.velocity;
-
 
     }
 

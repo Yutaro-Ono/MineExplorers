@@ -50,7 +50,7 @@ public class EnemyAttack : MonoBehaviour
     // プレイヤーから離れたら
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             isAttack = false;
         }

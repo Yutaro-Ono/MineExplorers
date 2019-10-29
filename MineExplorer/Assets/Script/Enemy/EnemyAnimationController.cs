@@ -9,10 +9,10 @@ using UnityEngine;
 public class EnemyAnimationController : MonoBehaviour
 {
 
-    // EnemyController取得
+    // EnemyController取得用
     private EnemyController m_enemyCtrl;
 
-    // Animatorコンポーネント取得
+    // Animatorコンポーネント取得用
     private Animator m_anim;
 
     // Start is called before the first frame update
@@ -20,7 +20,9 @@ public class EnemyAnimationController : MonoBehaviour
     {
         m_enemyCtrl = GetComponent<EnemyController>();
 
+        // Animatorコンポーネント取得
         m_anim = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -42,13 +44,26 @@ public class EnemyAnimationController : MonoBehaviour
         if(m_enemyCtrl.state == EnemyController.EnemyState.Attack)
         {
             m_anim.SetBool("Run Forward", false);
-            m_anim.SetTrigger("Attack 02");
+            m_anim.SetBool("Attack", true);
         }
 
         // 死亡モーション
         if(m_enemyCtrl.state == EnemyController.EnemyState.Dead)
         {
+            m_anim.SetBool("Run Forward", false);
             m_anim.SetTrigger("Die");
         }
+    }
+
+    public void AttackEnd()
+    {
+        m_anim.SetBool("RunForward", true);
+        
+        m_anim.SetBool("Attack", false);
+    }
+
+    public void Dead()
+    {
+        Destroy(gameObject);
     }
 }
