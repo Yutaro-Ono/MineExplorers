@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ApplyStone : MonoBehaviour
 {
+    SwitchManager m_switchManager;
+    //スイッチに適応させるスクリプト
+    //石がハマったときにハマったことをManagerに報告する
     void Start()
     {
 
@@ -22,6 +25,7 @@ public class ApplyStone : MonoBehaviour
                 , this.transform.position.y + 0.5f
                 , this.transform.position.z);
             Debug.Log("はめ込み完了");
+            m_switchManager.Applystone();
         }
     }
 }
