@@ -51,6 +51,8 @@ public class EnemyAnimationController : MonoBehaviour
         if(m_enemyCtrl.state == EnemyController.EnemyState.Dead)
         {
             m_anim.SetBool("Run Forward", false);
+            m_anim.SetBool("Attack", false);
+
             m_anim.SetTrigger("Die");
         }
     }
